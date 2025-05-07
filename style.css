@@ -1,3 +1,9 @@
+:root {
+    --main-color: #8D7B68;
+    --secondaary-color:  #FEF3E2;
+    --primary-color: #212121;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +15,7 @@ body {
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    background-color: var(--secondaary-color);
 }
 
 /* Header Styling */
@@ -204,8 +211,8 @@ body {
 
 /* Featured Destinations Section */
 .destinations-section {
-    padding: 2rem 10%; 
     margin: 0 auto; 
+    
 }
 .featured-destination {
     width: 100%;
@@ -216,16 +223,17 @@ body {
 }
 .section-title {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
     color: #333;
     text-align: center;
     font-weight: 700;
 }
 .destination-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 2fr);
     width: 100%; 
+    gap: 20px;
 }
 
 .card {
@@ -254,6 +262,13 @@ body {
     width: 100%;
     height: 180px; 
     object-fit: cover;
+}
+.boracay-title {
+    font-size: 20px;
+    margin-left: 0.50rem;
+    margin-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
 }
 .featured-elements{
     padding: 0.75rem; 
@@ -293,26 +308,147 @@ body {
     transform: translateX(5px);
 }
 
-/* Responsive styles */
-@media (max-width: 992px) {
+/* Food Container */  
+.food-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: black;
+    min-height: 90vh;
+}
+
+.food-container > div {
+    padding: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.item1, .item2, .item3, .item4, .item5, .item6 {
+    border-radius: 10px;
+}
+
+.item1 {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background: url('assets/lumpia.jpg');
+    background-color: #c1b5a4;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.item2 {
+    grid-column: 2;
+    grid-row: 1;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+     url('assets/adobo.jpg');
+    background-size: cover;
+}
+
+.item3 {
+    grid-column: 3;
+    grid-row: 1;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+     url('assets/letchon.jpeg');
+    background-size: cover;
+}
+
+.item4 {
+    grid-column: 4;
+    grid-row: 1;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+     url('assets/sinigang.jpg');
+    background-size: cover;
+}
+
+.item5 {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+    url('assets/halohalo.jpg');
+    background-size: cover;
+}
+
+.item6 {
+    grid-column: 4;
+    grid-row: 2;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+    url('assets/letchon.jpeg');
+    background-size: cover;
+}
+
+.food-container > div:hover {
+    transform: scale(1.03);
+}
+
+.food-info {
+    z-index: 2;
+}
+
+.food-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.food-desc {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.food-link {
+    color: white;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.5);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.food-link:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+
+@media (max-width: 992px) and (min-width: 768px) {
     .destination-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px; /* More space between cards */
+    }
+    .card {
+        max-width: 800px; /* Or whatever maximum you prefer */
     }
     
-    .hero-title {
-        font-size: 48px;
-    }
-    
-    .hero-subtitle {
-        font-size: 20px;
+    .destination-img {
+        height: 220px; /* Taller image */
     }
 }
+/* Responsive styles */
+
 
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
-    
+    .destination-grid {
+        grid-template-columns: repeat(2, 10fr) !important; 
+        gap: 30px; /* More space between cards */
+    }
     .nav-links {
         position: fixed;
         top: 0;
@@ -326,6 +462,17 @@ body {
         transition: right 0.5s ease;
         z-index: 99;
     }
+    .card {
+        margin-bottom: 1.75rem;
+    }
+    .destination-img {
+        height: 200px; /* Increase image height */
+    }
+    
+    .featured-elements p {
+        font-size: 0.9rem; /* Slightly larger text */
+    }
+    
     
     .nav-links.active {
         right: 0;
@@ -354,6 +501,19 @@ body {
 }
 
 @media (max-width: 480px) {
+    .destination-grid {
+        grid-template-columns: repeat(1, 1fr) !important; 
+        gap: 30px; 
+    }
+    .destination-grid {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .boracay-title {
+        font-size: 24px; 
+    }
+
     .hero-title {
         font-size: 32px;
     }
