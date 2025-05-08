@@ -85,7 +85,7 @@ body {
 }
 
 .nav-links a {
-    color: var(--secondaary-color);
+    color: var(--milk);
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
@@ -127,7 +127,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: var(--milk);
 }
 
 .hero::before {
@@ -223,22 +223,31 @@ body {
     padding: 2rem 50px; 
 }
 .section-title {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-    color: #333;
+    font-size: 1.75rem;
+    margin-top: 7rem !important;
+    margin-bottom: 10rem !important;
+    color: var(--main-color) !important;
     text-align: center;
     font-weight: 700;
+}
+.section-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 10px auto 0;
 }
 .destination-grid {
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     width: 100%; 
     gap: 20px;
+    margin-bottom: 10rem;
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: var(--milk);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -282,7 +291,7 @@ body {
     overflow: hidden;
 }
 .button-destination {
-    background: hsl(0, 0%, 0%);
+    background: var(--main-color);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -315,9 +324,10 @@ body {
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: var(--main-color);
     text-align: center;
     font-weight: 700;
+    margin-bottom: 10rem;
 }
 .food-text::after {
     content: "";
@@ -370,7 +380,7 @@ body {
     position: absolute;
     top: 15px;
     left: 0;
-    background-color: var(--secondaary-color);
+    background-color: var(--milk);
     color: var(--main-color);
     padding: 5px 15px;
     font-size: 0.8rem;
@@ -444,7 +454,7 @@ body {
 
 .food-link {
     background-color: var(--main-color);
-    color: var(--secondaary-color);
+    color: var(--milk);
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     padding: 8px 15px;
@@ -496,12 +506,12 @@ body {
 .icon {
     font-size: 3rem;
     margin-bottom: 20px;
-    color: var(--milk);
+    color: var(--secondaary-color);
 }
 
 .reason-title {
     font-size: 1.5rem;
-    color: #333;
+    color: var(--secondaary-color);
     margin-bottom: 15px;
     font-weight: 600;
 }
