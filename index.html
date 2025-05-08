@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cal+Sans&family=Lilita+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <title>Explore Philippines - Your Ultimate Travel Guide</title>
     <link rel="stylesheet" href="style.css">
@@ -36,14 +37,14 @@
             <h1 class="hero-title">Discover The Beauty of Philippines</h1>
             <p class="hero-subtitle">Explore pristine beaches, crystal clear waters, and stunning landscapes</p>
             <div class="explore-btn">
-                <button class="travel-btn">Discover Paradise <i>→</i></button>
+                <button class="travel-btn">Click me<i>→</i></button>
             </div>
         </div>
     </section>
 
     <!-- Featured Destinations Section -->
     <section class="destinations-section">
-        <div class="featured-section">
+        <div class="featured-section" id="featured">
             <h2 class="section-title">Featured Destination</h2>
             <div class="destination-grid">
                 <div class="card">
@@ -88,24 +89,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="assets/bicol.jpg" alt="palawan" class="destination-img">
-                    <h2 class="boracay-title">Bicol</h2>
-                    <div class="featured-elements">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis odit id ullam vero explicabo nam vel tempore placeat eum quas eius esse iusto amet quo fugiat, enim ipsa repellendus neque?</p>
-                        <div class="btn2">
-                            <button class="button-destination">View More ➡</button>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
     <section>
-        <h2>Food Gallery</h2>
+        <h2 class="food-text">Food Gallery</h2>
         <div class="food-container">
             <div class="item1">
-                <h1>Top Food</h1>
+
                 </div>
             
             <div class="item2">
@@ -141,14 +133,122 @@
             </div>
             <div class="item6">
                 <div class="food-info">
-                    <div class="food-title">Halo-Halo</div>
+                    <div class="food-title">Paksiw</div>
                     <div class="food-desc">A colorful dessert with shaved ice, sweet beans, fruits, jellies, ice cream, and evaporated milk.</div>
                     <a href="#" class="food-link">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
-
+    <section class="why-visit-section">
+        <h2 class="section-title">Why Visit the Philippines</h2>
+        
+        <div class="reasons-container">
+            <div class="reason-card">
+                <div class="icon">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <h3 class="reason-title">Paradise Beaches</h3>
+                <p class="reason-text">Explore over 7,000 islands with pristine white sand beaches and crystal-clear turquoise waters perfect for swimming, snorkeling, and diving.</p>
+            </div>
+            
+            <div class="reason-card">
+                <div class="icon">
+                    <i class="fas fa-mountain"></i>
+                </div>
+                <h3 class="reason-title">Natural Wonders</h3>
+                <p class="reason-text">Discover breathtaking landscapes from the Chocolate Hills of Bohol to the stunning rice terraces of Banaue, declared a UNESCO World Heritage site.</p>
+            </div>
+            
+            <div class="reason-card">
+                <div class="icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="reason-title">Culinary Delights</h3>
+                <p class="reason-text">Experience a rich fusion of flavors from Spanish, Chinese, and local traditions that create the unique tastes of Filipino cuisine.</p>
+            </div>
+            
+            <div class="reason-card">
+                <div class="icon">
+                    <i class="fas fa-smile-beam"></i>
+                </div>
+                <h3 class="reason-title">Filipino Hospitality</h3>
+                <p class="reason-text">Meet some of the world's friendliest people known for their warm smiles, genuine hospitality, and English proficiency making travel easier.</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-wave"></div>
+        <div class="footer-container">
+            <div class="footer-header">
+                <div class="footer-logo">
+                    <h2>Explore<span>PH</span></h2>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/kelllllll/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-about">
+                    <p>Explore the beauty of the Philippines with our curated travel guides. Discover pristine beaches, breathtaking landscapes, vibrant culture, and unforgettable adventures.</p>
+                    <div class="footer-subscribe">
+                        <h3>Stay Updated</h3>
+                        <div class="subscribe-form">
+                            <input type="email" placeholder="Your email address">
+                            <button><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Food Gallery</a></li>
+                        <li><a href="#">Travel Tips</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Top Places</h3>
+                    <ul>
+                        <li><a href="#">Boracay</a></li>
+                        <li><a href="#">Palawan</a></li>
+                        <li><a href="#">Bohol</a></li>
+                        <li><a href="#">Siargao</a></li>
+                        <li><a href="#">Cebu</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <a href="mailto:info@exploreph.com"><i class="far fa-envelope"></i> info@exploreph.com</a>
+                        <a href="tel:+6391234567890"><i class="fas fa-phone-alt"></i> +63 912 345 6789</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Manila, Philippines</a>
+                    </div>
+                </div>
+                
+                <div class="footer-tagline">
+                    <div class="tagline-text">
+                        © 2025 ExplorePH. All rights reserved. Made with <span>♥</span> in the Philippines
+                    </div>
+                    <div class="footer-nav">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>

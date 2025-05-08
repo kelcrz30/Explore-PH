@@ -19,3 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     cards.forEach(card => observer.observe(card));
 });
+
+document.querySelector('.travel-btn').addEventListener('click', function () {
+    const target = document.querySelector('#featured');
+    const offset = -700; // Change this number for more/less scroll adjustment
+    const position = target.getBoundingClientRect().top + window.pageYOffset + offset;
+
+    window.scrollTo({
+      top: position,
+      behavior: 'smooth'
+    });
+  });
